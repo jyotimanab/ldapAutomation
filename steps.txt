@@ -1,0 +1,41 @@
+
+#OS Version: Red Hat Enterprise Linux release 9.5 (Plow)
+#Default LDAP Administrator password is :  "Admin@Welcome123"
+#This script will increase the LDAP MDB db size to 5GB
+#To get the ldap log need to do below configuration:
+#Domain name should be in "example.com" format
+#OU name in "name" format
+
+===================================================
+open "/etc/rsyslog.conf" file, add below line:
+===================================================
+
+#vim /etc/rsyslog.conf
+
+local4.* /var/log/openldap.log
+
+
+Restart rsyslog service
+
+#restart rsyslog service
+
+===================================================
+
+Steps to Follow:
+================
+1. Download all files 
+
+2. sh "ldapAuto.sh"
+
+3. We should follow all steps sequentially [1 to 5]
+
+	Select an option:
+	1. Install openldap
+	2. Generate ldap admin password and update in db.ldif
+	3. Genarete Domain name and update
+	4. configure ldap server
+	5. check ldap server
+	6. Exit
+
+
+
